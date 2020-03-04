@@ -16,4 +16,10 @@ source /etc/profile.d/android.sh
 
 echo "Add i386 support"
 sudo dpkg --add-architecture i386
+sudo apt-get update
 sudo apt-get install -y libc6:i386 libstdc++6:i386 zlib1g:i386
+
+echo "Installing SDKs"
+cd /opt/android-sdk-linux/tools
+sudo ./android list sdk --all
+sudo ./android update sdk --no-ui --all
