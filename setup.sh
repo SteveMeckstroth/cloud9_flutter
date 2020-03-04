@@ -13,3 +13,7 @@ sudo echo 'export PATH=$PATH:/opt/android-sdk-linux/platform-tools' >> /etc/prof
 
 sudo echo 'export ANDROID_TOOLS=/opt/android-sdk-linux' >> /etc/profile.d/android.sh
 source /etc/profile.d/android.sh
+
+echo "Add i386 support"
+sudo dpkg --add-architecture i386
+sudo apt-get install -y libc6:i386 libstdc++6:i386 zlib1g:i386
