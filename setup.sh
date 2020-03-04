@@ -23,3 +23,7 @@ echo "Installing SDKs"
 cd /opt/android-sdk-linux/tools
 sudo ./android list sdk --all
 sudo ./android update sdk --no-ui --all
+
+echo "Installing Flutter"
+cd /opt
+sudo git clone https://github.com/flutter/flutter.git -b stable
